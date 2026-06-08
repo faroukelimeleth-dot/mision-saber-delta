@@ -144,7 +144,7 @@
   <!-- SCREEN 0: ENCRYPTED -->
   <section class="screen active" id="s0">
     <svg class="lock" viewBox="0 0 24 24" fill="none"><path d="M6 10V8a6 6 0 1112 0v2" stroke="currentColor" stroke-width="1.6"/><rect x="4" y="10" width="16" height="11" rx="2.5" fill="currentColor" opacity=".9"/><circle cx="12" cy="15" r="1.6" fill="#0b2236"/><rect x="11.2" y="15.5" width="1.6" height="3.5" rx=".8" fill="#0b2236"/></svg>
-    <div class="crypt-line" id="cryptText">MENSAJE ENCRIPTADO…<br>SÓLO PARA ÉLITE</div>
+    <div class="crypt-line" id="cryptText">MENSAJE ENCRIPTADO…<br>SOLO PARA ÉLITE</div>
     <div class="tri-wrap">
       <div class="ring spin" style="width:240px;height:240px;"></div>
       <div class="ring spin rev" style="width:300px;height:300px;"></div>
@@ -276,7 +276,7 @@
   }
   function decode(){const btn=document.getElementById('decodeBtn'),t=document.getElementById('cryptText');
     btn.textContent='DESCIFRANDO…';btn.style.animation='pulseGlow 1s infinite';
-    const target=['MENSAJE ENCRIPTADO…','SÓLO PARA ÉLITE'],chars='ABCDEF0123456789#@%&▲△◇';let frame=0;
+    const target=['MENSAJE ENCRIPTADO…','SOLO PARA ÉLITE'],chars='ABCDEF0123456789#@%&▲△◇';let frame=0;
     const iv=setInterval(()=>{t.innerHTML=target.map(line=>line.split('').map((c,i)=>(i<frame/2)?c:chars[Math.floor(Math.random()*chars.length)]).join('')).join('<br>');
       frame++;if(frame>Math.max(...target.map(l=>l.length))*2+2){clearInterval(iv);t.innerHTML=target.join('<br>');setTimeout(()=>go(1),350);}},45);}
 
